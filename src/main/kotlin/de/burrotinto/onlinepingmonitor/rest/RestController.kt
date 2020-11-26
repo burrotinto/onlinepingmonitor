@@ -16,7 +16,7 @@ class PingController(val pingRepository: PingRepository) {
     fun greeting(@RequestParam(value = "ip") ip: String,
                  @RequestParam(value = "latenz") latenz: Long,
                  @RequestParam(value = "time") time: Long?) {
-        pingRepository.add(PingResult(ip, latenz, time ?: System.currentTimeMillis()))
+        pingRepository.save(PingResult(ip, latenz, time ?: System.currentTimeMillis()))
     }
 
 }

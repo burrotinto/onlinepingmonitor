@@ -8,7 +8,6 @@ class MainView(pingGrid: PingGrid):VerticalLayout() {
     init {
         addClassName("list-view")
         setSizeFull()
-
         add(pingGrid)
 
     }
